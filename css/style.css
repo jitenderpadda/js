@@ -81,7 +81,7 @@ hr{margin-top: 30px;}
 .player {display: block;height: 100%;left: 0;position: fixed;top: 0;width: 100%;z-index: -3;}
 .parallax-overlay {
 	background-color:rgba(0, 0, 0, 0.4);
-    background-image: url("../img/overlay-pattern.png");
+  /*  background-image: url("../img/overlay-pattern.png"); */
     background-repeat: repeat;
     height: 100%;
     left: 0;
