@@ -1,0 +1,68 @@
+/* NAVIGATION STYLE -2
+-------------------------*/
+#header {padding: 35px 0;position: fixed;top: 0;width: 100%;z-index:100;transition: all 0.5s ease 0s;-webkit-transition: all 0.5s ease 0s;-moz-transition: all 0.5s ease 0s;-o-transition: all 0.5s ease 0s;-ms-transition: all 0.5s ease 0s;}
+.header-inner {margin: auto;position: relative; width: 85%;}
+.nav-logo {background: url("../img/brand_name.png") no-repeat scroll 0 0 transparent;height: 17px;margin-top: 5px;width: 172px;float: left;}
+#header .navicon {background: url("../img/navicon-icon.png") no-repeat scroll 0 -28px transparent;height: 27px;width: 36px;cursor: pointer;float: right;}
+#header.scrolled {background:#333; padding:20px 0 !important;}
+#header.scrolled .logo {margin-top:4px;}
+#nav {background:#222;padding: 20px 0 0;position: fixed;top: -120px;width: 100%;z-index:101;}
+.hidden-con{display: none;}
+#nav .close {background: url("../img/nav-close.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);height: 28px;width: 29px;cursor: pointer;float: right;opacity:1;}
+#nav .menunav-container {
+    float: right;
+    position: relative;
+    text-align: center;
+    width: 75%;
+}
+#menu-main-nav {
+    border: medium none;
+    display: inline-block;
+    height: 40px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 4px 0 0;
+    width: 100%;
+}
+#nav li {float: left;width:auto;}
+#nav li a {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0 20px;
+    outline: 0 none;
+    padding-bottom: 10px;
+    text-decoration: none;
+    text-transform: none;
+}
+#nav li a .sub {background:rgba(0, 0, 0, 0);border: medium none;float: left;font-size: 14px;font-weight: normal;letter-spacing: 1px;margin-top:0px;opacity: 0;
+    padding: 20px 0 0;text-transform: none;width: 100%;}
+#nav li a:hover {border-bottom: 1px solid #fff;}	
+#nav li a:hover .sub {opacity: 1;}
+@media (max-width: 1200px) {
+  #nav .menunav-container {
+    float: none;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    width: 68%;
+}
+#menu-main-nav {
+    border: medium none;
+    display: inline-block;
+    height: auto;
+    list-style: none outside none;
+    margin: 60px 0 0;
+    padding: 4px 0 0;
+    width: 100%;
+}
+#nav li {
+    float: none;
+    margin: 10px 0;
+    width: auto;
+}
+}
