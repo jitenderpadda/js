@@ -41,7 +41,8 @@
 
 		<link href="css/subscribe.css" rel="stylesheet"/>		
 		<script src="js/modernizr.custom.js"></script>
-		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 	</head>
 	<body>		
 	<div class="main_wrap">
@@ -784,14 +785,20 @@
 					</div>
 					<div class="col-md-6 col-contact-form text-center" id="contact">
 						<div id="message"></div>
-						<form method="post" action="email.php" name="contactform" id="contactform">
-														<div class="g-recaptcha" data-sitekey="6LeA9QUTAAAAAKXoXO_JvlLbgood_Ap7IbtJxUe9" style="position: relative;left: 15px;"></div>
+						<form method="POST" action="/contactForm.php">
+						<input name="oid" type="hidden" value="00D28000000Hirh">
+						<input name="retURL" type="hidden" value="http://www.code-jinn.com">
+						<input name="lead_source" type="hidden" value="Web">
+						<div class="g-recaptcha" data-sitekey="6LeA9QUTAAAAAKXoXO_JvlLbgood_Ap7IbtJxUe9" style="position: relative;left: 15px;"></div>
 
 							<fieldset>
 								<div class="col-md-6"> 
-									<input name="name" type="text" id="name" size="30" value="" required placeholder="Name"/>
+									<input name="first_name" type="text" id="first_name" size="30" value="" required placeholder="Name"/>
 								</div>
-								<div class="col-md-6"> 
+								 <div class="col-md-6"> 
+                                   <input  id="last_name" maxlength="40" name="last_name" size="30" type="text" placeholder="Last Name"/>
+                               </div>
+								<div class="col-md-12"> 
 									<input name="email" type="text" id="email" size="30" value="" required placeholder="Email"/>
 								</div>
 								<div class="col-md-12"> 
@@ -804,7 +811,8 @@
 									<input type="submit" class="submit" id="submit" value="Submit" />		
 								</div>	
 							</fieldset>
-						</form>					                       	
+						</form>
+						
 					</div> 								
 				</div>
 				<div class="section-scroll">
