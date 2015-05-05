@@ -42,6 +42,18 @@
 		<link href="css/subscribe.css" rel="stylesheet"/>		
 		<script src="js/modernizr.custom.js"></script>
 		<script src="https://www.google.com/recaptcha/api.js"></script>
+		<script type="text/javascript">
+		function validateEmail(){
+			var re= /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+			var email=document.getElementById("email").value;
+			var val=re.test(document.getElementById("email").value);
+			if(val==false){
+			alert("Please enter a Valid Email Address");
+			return false;
+			}
+			else return true;
+		}
+		</script>
 
 	</head>
 	<body>		
@@ -783,7 +795,7 @@
 					</div>
 					<div class="col-md-6 col-contact-form text-center" id="contact">
 						<div id="message"></div>
-						<form method="POST" action="/contactForm.php">
+						<form method="POST" action="/contactForm.php" onsubmit="return validateEmail()">
 						<input name="oid" type="hidden" value="00D28000000Hirh">
 						<input name="retURL" type="hidden" value="http://www.code-jinn.com">
 						<input name="lead_source" type="hidden" value="Web">
@@ -804,7 +816,7 @@
 									<textarea name="comments" cols="40" rows="5" id="comments" required placeholder="Message"></textarea>
 								</div>
 								<div class="col-md-12"> 
-									<input type="submit" class="submit" id="submit" value="Submit" />		
+									<input type="submit" class="submit" id="submit" value="Submit"/>		
 								</div>	
 							</fieldset>
 							<div class="g-recaptcha" data-sitekey="6LeA9QUTAAAAAKXoXO_JvlLbgood_Ap7IbtJxUe9" style="position: relative;left: 15px;"></div>
