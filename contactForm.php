@@ -39,6 +39,8 @@ include_once('/home/codejinn/public_html/php/recaptchalib.php');
                 'oid'=>urlencode($oid),
                 'retURL'=>urlencode($retURL),
                 'first_name'=>urlencode($first_name),
+		'last_name'=>urlencode($last_name),
+		'company'=>urlencode($company),
                 'email'=>urlencode($email),
                 'phone'=>urlencode($phone),
                 'comments'=>urlencode($comments),
